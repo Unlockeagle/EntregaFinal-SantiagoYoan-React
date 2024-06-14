@@ -1,0 +1,12 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#my_modal {
+  background-image: url("https://img.freepik.com/vector-gratis/ilustracion-revendedor-diseno-plano_23-2149479222.jpg?t=st=1718133471~exp=1718137071~hmac=bfce3504b0acf3abee0b1722e81030fc1117f46882074f2d910ddeb73107bf70&w=740");
+ background-size: cover;
+ 
+}
