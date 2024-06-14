@@ -1,8 +1,11 @@
+import { useContext, useEffect, useState } from "react";
 import { BagIcon, Check, LastName, Mail, Phone, User } from "./Icons";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast, Bounce } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import { CartContext } from "./context/CartContext";
 
 export default function Form({ clearCart, newOrders, orderId }) {
+  const {cartProds}=useContext(CartContext)
   const {
     register,
     handleSubmit,
@@ -11,40 +14,21 @@ export default function Form({ clearCart, newOrders, orderId }) {
     reset,
   } = useForm();
 
-  const notifyPurchaseOreder= () => {
-    toast.success(`Successful purchase, your Order is: " ${orderId} "`, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Bounce,
-      });
-      
-      }
-    
-
-
-  const handleNotification=() => {
-    if (orderId != null) {notifyPurchaseOreder()}
-  }
 
   const onSubmit = handleSubmit((data) => {
+    cartProds.length == 0 ? alert("carrito vacio") :
     newOrders(data.name, data.lastName, data.phone, data.mail);
-
+ 
     // para limpiartodo    
     reset();
     clearCart()
-  });
 
- 
+  });
 
   const clearForm = () => {
     reset();
   };
+
 
   return (
     <>
@@ -227,7 +211,7 @@ export default function Form({ clearCart, newOrders, orderId }) {
             {/* Inicio btn-submit input */}
 
             <button
-            onClick={handleNotification}
+            
               type="submit"
               className="btn btn-sm btn-block text-slate-800  text-base bg-amber-200 hover:bg-yellow-400"
             >
@@ -243,7 +227,9 @@ export default function Form({ clearCart, newOrders, orderId }) {
 
             {/* Fin btn-submit input */}
           </form>
+        
         </div>
+
       </section>
     </>
   );

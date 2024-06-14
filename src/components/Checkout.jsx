@@ -4,24 +4,18 @@ import OrderSummary from "./OrderSummary";
 import { CartContext } from "./context/CartContext";
 import ItemOrderSumary from "./ItemOrderSumary";
 import { addOrder } from "../firebase/firebase";
+import ModalComponent from "./ModalComponent";
+
 
 export default function Checkout() {
   const { cartProds, clearCarrito } = useContext(CartContext);
   const [orderID, setOrederID] = useState(null);
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
-
-
-  const openModal = () => {
-    setShowModal(true)
-  };
-
-  useEffect(() => {
-    if (orderID) {
-      openModal();
-    }
-  }, [orderID]);
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
+  
 
   const newOrders = (names, lastNames, phones, emails) => {
     const items = cartProds.map(({ id, title, quantity, price }) => ({
@@ -81,26 +75,10 @@ export default function Checkout() {
 
         <Form
           orderId={orderID}
-          newOrders={newOrders}
+          newOrders={ newOrders}
           clearCart={clearCarrito}
         />
-
-        
-          <dialog id="my_modal_1" className="modal backdrop-blur-sm">
-            <div className="modal-box bg-white w-72">
-              <h3 className="text-black">Your order ID is {orderID}</h3>
-
-              <div id="my_modal" className="">
-                <div className="h-14"></div>
-                <form method="dialog">
-                  <div className="modal-action">
-                    <button className="btn">Close</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </dialog>
-        
+        <ModalComponent orderID={orderID} show={showModal} onClose={closeModal}/>
       </article>
     </>
   );

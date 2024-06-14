@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { toast, Bounce } from "react-toastify";
 import {
   addDoc,
   collection,
@@ -58,8 +59,24 @@ export async function filterProductsById(prodId) {
 export async function addOrder(order){
   const ordersColletions = collection(db, 'orders');
   const docRef = await addDoc(ordersColletions, order);
+
+  notifyPurchaseOreder(docRef.id)
   console.log('docRef generado: ' + docRef);
   console.log('Id generado: '+docRef.id);
   return docRef.id
 }
 
+const notifyPurchaseOreder = (orderId) => {
+  toast.success(`Successful purchase, your Order is: " ${orderId} "`, {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    transition: Bounce,
+    });
+    
+    }
