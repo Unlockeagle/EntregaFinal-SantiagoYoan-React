@@ -5,7 +5,7 @@ export default function NavBarComponent() {
 
   return (
     <>
-      <nav className=" navbar w-full bg-slate-800 text-slate-50 fixed top-0 left-0 justify-center ">
+      <nav className=" navbar w-full bg-slate-800 text-slate-50 fixed top-0 left-0 justify-center z-50 ">
         <div className="navbar-start">
           <Link to={"/"}>
             <h1 className="text-2xl text-amber-200">Araguaney</h1>
