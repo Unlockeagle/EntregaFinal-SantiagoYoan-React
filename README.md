@@ -146,7 +146,27 @@ Install EntregaFinal-SantiagoYoan-React with npm
 
 ## Demo
 
-Insert gif or link to demo
+<div style = 'display:flex; gap:2rem;'>
+<p style = 'text-align:start;'>
+<img src="https://curity.io/images/resources/code-examples/code-examples-vercel.jpg" width="100px">
+</p>
+
+https://entrega-final-santiago-yoan-react.vercel.app/
+
+
+</div>
+<div style = 'display:flex; gap:2rem;'>
+<p style = 'text-align:start;'>
+<img src="./public/demo.png" width="700px">
+</p>
+</div>
+
+</div>
+<div style = 'display:flex; gap:2rem;'>
+<p style = 'text-align:start;'>
+<img src="./public/iPhone-13-PRO-MAX-localhost.png" width="200px">
+</p>
+</div>
 
 
 ## Feedback

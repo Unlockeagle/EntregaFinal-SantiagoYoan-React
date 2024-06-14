@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Form from "./Form";
 import OrderSummary from "./OrderSummary";
 import { CartContext } from "./context/CartContext";

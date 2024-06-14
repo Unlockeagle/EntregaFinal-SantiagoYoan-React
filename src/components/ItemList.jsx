@@ -33,7 +33,7 @@ export default function ItemList({
             <div className={"mt-4 mb-2 mx-4 py-2"}>
               <Link to={`/item/${idProd}`}>
                 <button className=" btn-outline  btn btn-sm btn-block text-gray-600  text-base bg-amber-200 hover:bg-yellow-400">
-                  Ver detalles
+                See details
                 </button>
               </Link>
             </div>

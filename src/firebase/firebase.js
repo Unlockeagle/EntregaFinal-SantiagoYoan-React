@@ -61,8 +61,7 @@ export async function addOrder(order){
   const docRef = await addDoc(ordersColletions, order);
 
   notifyPurchaseOreder(docRef.id)
-  console.log('docRef generado: ' + docRef);
-  console.log('Id generado: '+docRef.id);
+
   return docRef.id
 }
 

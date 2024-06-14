@@ -20,7 +20,7 @@ export default function CartComponent() {
     <>
       <h2>Shopping Cart</h2>
       <section className="flex flex-col sm:justify-between md:flex-row mt-12 gap-8">
-        <div className="flex justify-between flex-col gap-4 p-2 rounded-l-md shadow-xl rounded-md w-[450px]">
+        <div className="flex justify-between flex-col gap-4 p-2 rounded-l-md shadow-xl rounded-md w-[450px] sm:w-[550px]">
           <h2 className="text-xl font-bold text-start">Shopping Cart</h2>
 
           {cartProds && cartProds.length > 0 ? (

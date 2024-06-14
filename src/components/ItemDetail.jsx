@@ -19,7 +19,7 @@ export default function ItemDetail({
           <img className="object-cover w-full h-full" src={image} alt={title} />
         </div>
         <div className="flex flex-col justify-around items-start gap-4">
-          <article className="flex gap-8">
+          <article className="flex gap-8 text-start">
             <p className="text-xl">Producto: {title}</p>
             <p className="text-xl font-bold">Precio: $ {price}</p>
           </article>

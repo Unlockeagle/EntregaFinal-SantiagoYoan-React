@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { BagIcon, Check, LastName, Mail, Phone, User } from "./Icons";
 import { useForm } from "react-hook-form";
 import { ToastContainer } from "react-toastify";

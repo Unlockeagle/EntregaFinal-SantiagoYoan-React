@@ -25,10 +25,6 @@ export default function ItemDetailContainer() {
   };
 
 
-
-
-
-
   return (
     <>
       <div className="flex flex-col gap-4 mt-12">
