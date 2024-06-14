@@ -13,7 +13,7 @@ export default function ItemCart({
   return (
     <>
       <div className="flex gap-4">
-        <div className="w-20 h-20 overflow-hidden align-center items-start">
+        <div className="w-10 h-10 sm:w-20 sm:h-20 overflow-hidden align-center items-start">
           <img
             className="w-full h-full object-cover rounded-md"
             src={image}
@@ -21,8 +21,8 @@ export default function ItemCart({
           />
         </div>
 
-        <div className="flex gap-4 w-96 text-start items-start">
-          <div className="flex w-56">
+        <div className="flex gap-4 text-start items-start">
+          <div className="flex w-32">
             <p>{title}</p>
           </div>
           <div className="flex flex-col">

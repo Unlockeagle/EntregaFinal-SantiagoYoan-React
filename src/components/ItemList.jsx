@@ -19,7 +19,7 @@ export default function ItemList({
             />
           </div>
           <div className="contenedor-info justify-start card-actions">
-            <div className=" flex sm:justify-between sm:mx-4 gap-8">
+            <div className=" flex sm:justify-between mx-4 gap-8">
               <p className="font-sans text-base text-center antialiased font-medium leading-relaxed text-blue-gray-900">
                 {title}
               </p>
